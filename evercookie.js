@@ -236,7 +236,7 @@ var evercookie = (function (window) {
           }
 
           // reset cookie everywhere
-          if (dont_reset === undefined || dont_reset !== 1) {
+          if (candidate !== undefined && (dont_reset === undefined || dont_reset !== 1)) {
             self.set(name, candidate);
           }
           if (typeof cb === "function") {
